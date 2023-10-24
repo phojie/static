@@ -18,6 +18,10 @@ const past: BadgePreset = {
 }
 
 export default defineConfig({
+  github: {
+    login: 'phojie',
+    type: 'user',
+  },
   tiers: [
     {
       title: 'Past Sponsors',
@@ -65,17 +69,17 @@ export default defineConfig({
       monthlyDollars: 500,
       preset: presets.xl,
     },
-    {
-      title: 'Special Sponsor',
-      monthlyDollars: Infinity,
-      composeAfter(compose, _, config) {
-        compose
-          .addSpan(20)
-          .addText('Special Sponsors', 'sponsorkit-tier-title')
-          .addSpan(10)
-          // .addRaw(ZENHUB_LOGO(config.width!, compose.height))
-          .addSpan(130)
-      }
-    },
+    // {
+    //   title: 'Special Sponsor',
+    //   monthlyDollars: Infinity,
+    //   composeAfter(compose, _, config) {
+    //     compose
+    //       .addSpan(20)
+    //       .addText('Special Sponsors', 'sponsorkit-tier-title')
+    //       .addSpan(10)
+    //       // .addRaw(ZENHUB_LOGO(config.width!, compose.height))
+    //       .addSpan(130)
+    //   }
+    // },
   ]
 })
