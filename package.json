@@ -3,7 +3,7 @@
   "name": "@phojie/sponsor",
   "main": "index.js",
   "scripts": {
-    "build": "sponsorkit"
+    "build": "sh build.sh"
   },
   "devDependencies": {
     "sponsorkit": "latest"
