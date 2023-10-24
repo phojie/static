@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "name": "@phojie/sponsor",
+  "main": "index.js",
+  "scripts": {
+    "build": "sponsorkit"
+  },
+  "devDependencies": {
+    "sponsorkit": "latest"
+  }
+}
