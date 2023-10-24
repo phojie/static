@@ -56,7 +56,7 @@ export default defineConfig({
           .addText('Silver Sponsors', 'sponsorkit-tier-title')
           .addSpan(10)
           .addRaw(ZENHUB_LOGO(config.width!, compose.height))
-          .addSpan(130)
+          .addSpan(65)
       }
     },
     {
