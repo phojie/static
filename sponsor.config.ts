@@ -8,8 +8,8 @@ const ZENHUB_LOGO = (width: number, y: number) => `
 
 const GOTEAM_LOGO = (width: number, y: number) => `
 <a xlink:href="https://go.team/" class="sponsorkit-link" target="_blank" id="GoTeam">
-<svg  x="${(width - 381) / 2}" y="${y}" width="381" height="110" viewBox="0 0 381 110" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<rect width="381" height="110" fill="url(#pattern0)"/>
+<svg  x="${(width - 296) / 2}" y="${y}" width="296" height="86" viewBox="0 0 296 86" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect width="296" height="86" fill="url(#pattern0)"/>
 <defs>
 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image0_2_2" transform="scale(0.000626852 0.00215054)"/>
