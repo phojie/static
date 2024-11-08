@@ -1,4 +1,4 @@
-import { BadgePreset, defineConfig, presets } from 'sponsorkit'
+import { defineConfig, presets } from 'sponsorkit'
 
 const ZENHUB_LOGO = (width: number, y: number) => `
 <a xlink:href="https://zenhub.com/" class="sponsorkit-link" target="_blank" id="Zenhub">
@@ -7,7 +7,7 @@ const ZENHUB_LOGO = (width: number, y: number) => `
 `
 
 const Multiplai_LOGO = (width: number, y: number) => `
-<a xlink:href="https://https://multiplai.tech//" class="sponsorkit-link" target="_blank" id="GoTeam">
+<a xlink:href="https://multiplai.tech/" class="sponsorkit-link" target="_blank" id="GoTeam">
 <svg  x="${(width - 300) / 2}" y="${y}"  width="300" height="90" viewBox="0 0 300 90" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <g filter="url(#filter0_d_201_22)">
   <path d="M4 10C4 4.47715 8.47715 0 14 0H144H274C279.523 0 284 4.47715 284 10V58C284 63.5228 279.523 68 274 68H14C8.47715 68 4 63.5228 4 58V10Z" fill="white"/>
@@ -33,17 +33,6 @@ const Multiplai_LOGO = (width: number, y: number) => `
 </a>
 `
 
-const past: BadgePreset = {
-  avatar: {
-    size: 20,
-  },
-  boxWidth: 22,
-  boxHeight: 22,
-  container: {
-    sidePadding: 35,
-  },
-}
-
 export default defineConfig({
   github: {
     login: 'phojie',
@@ -53,11 +42,11 @@ export default defineConfig({
     {
       title: 'Past Sponsors',
       monthlyDollars: -1,
-      preset: past,
+      preset: presets.xs,
     },
     {
       title: 'Backers',
-      preset: presets.small,
+      preset: presets.base,
     },
     {
       title: 'Sponsors',
