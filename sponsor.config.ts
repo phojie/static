@@ -1,4 +1,4 @@
-import { defineConfig, presets } from 'sponsorkit'
+import { defineConfig, presets, tierPresets } from 'sponsorkit'
 
 const ZENHUB_LOGO = (width: number, y: number) => `
 <a xlink:href="https://zenhub.com/" class="sponsorkit-link" target="_blank" id="Zenhub">
@@ -42,48 +42,36 @@ export default defineConfig({
     {
       title: 'Past Sponsors',
       monthlyDollars: -1,
-      preset: presets.xs,
+      preset: tierPresets.xs,
     },
     {
       title: 'Backers',
-      preset: presets.base,
+      preset: tierPresets.base,
     },
     {
       title: 'Sponsors',
       monthlyDollars: 7,
-      preset: {
-        avatar: {
-          size: 42,
-        },
-        boxWidth: 52,
-        boxHeight: 52,
-        container: {
-          sidePadding: 30,
-        },
-      },
+      preset: tierPresets.base,
     },
     {
       title: 'Silver Sponsors',
-      monthlyDollars: 50,
-      preset: presets.medium,
-      composeAfter(compose, _, config) {
+      monthlyDollars: 16,
+      preset: tierPresets.medium,
+      composeAfter(compose, sponsors, config) {
         compose
-          .addSpan(20)
-          .addText('Silver Sponsors', 'sponsorkit-tier-title')
-          .addSpan(10)
           .addRaw(ZENHUB_LOGO(config.width!, compose.height))
           .addSpan(65)
       }
     },
     {
       title: 'Gold Sponsors',
-      monthlyDollars: 100,
-      preset: presets.large,
+      monthlyDollars: 50,
+      preset: tierPresets.large,
     },
     {
       title: 'Platinum Sponsors',
-      monthlyDollars: 500,
-      preset: presets.xl,
+      monthlyDollars: 100,
+      preset: tierPresets.xl,
     },
     {
       title: 'Special Sponsor',
@@ -94,7 +82,7 @@ export default defineConfig({
           .addText('Special Sponsors', 'sponsorkit-tier-title')
           .addSpan(10)
           .addRaw(Multiplai_LOGO(config.width!, compose.height))
-          .addSpan(130)
+          .addSpan(100)
       }
     },
   ]
