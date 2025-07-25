@@ -58,9 +58,13 @@ export default defineConfig({
       monthlyDollars: 16,
       preset: tierPresets.medium,
       composeAfter(compose, sponsors, config) {
+        // Always add ZenHub regardless of actual sponsors
         compose
+          .addSpan(20)
+          .addText('Silver Sponsors', 'sponsorkit-tier-title')
+          .addSpan(10)
           .addRaw(ZENHUB_LOGO(config.width!, compose.height))
-          .addSpan(65)
+          .addSpan(50)
       }
     },
     {
@@ -69,12 +73,12 @@ export default defineConfig({
       preset: tierPresets.large,
     },
     {
-      title: 'Diamond Sponsors',
+      title: 'Platinum Sponsors',
       monthlyDollars: 50,
-      preset: tierPresets.large,
+      preset: tierPresets.xl,
     },
     {
-      title: 'Platinum Sponsors',
+      title: 'Diamond Sponsors',
       monthlyDollars: 100,
       preset: tierPresets.xl,
     },
