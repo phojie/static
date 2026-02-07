@@ -38,6 +38,9 @@ export default defineConfig({
     login: 'phojie',
     type: 'user',
   },
+  outputDir: '.',
+  formats: ['svg', 'png'],
+  renderer: 'tiers', // or 'circles'
   tiers: [
     {
       title: 'Past Sponsors',
@@ -46,6 +49,7 @@ export default defineConfig({
     },
     {
       title: 'Backers',
+      monthlyDollars: 0,
       preset: tierPresets.base,
     },
     {
